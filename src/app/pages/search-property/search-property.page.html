@@ -1,0 +1,60 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>search-property</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <div class="main_content_div">
+
+    <div class="back_image bg_image" [style.backgroundImage]="'url(assets/imgs/5.jpg)'">
+      
+      <div class="white_back_div" (click)="openFilter()">
+        <ion-icon name="filter-outline"></ion-icon>
+      </div>
+    </div>
+
+    <div class="white_div">
+
+       <ion-label class="head_lbl">You Want to</ion-label>
+
+       <ion-grid fixed>
+        <ion-row>
+
+          <ion-col size="4" (click)="chooseTask(1)">
+            <div class="col_div" [class.active]="task == 1">
+              <ion-icon name="key-outline"></ion-icon>
+              <ion-label>SELL</ion-label>
+            </div>
+          </ion-col>
+
+          <ion-col size="4" (click)="chooseTask(2)">
+            <div class="col_div" [class.active]="task == 2">
+              <ion-icon name="search-outline"></ion-icon>
+              <ion-label>BUY</ion-label>
+            </div>
+          </ion-col>
+
+          <ion-col size="4" (click)="chooseTask(3)">
+            <div class="col_div" [class.active]="task == 3">
+              <ion-icon name="home-outline"></ion-icon>
+              <ion-label>RENT</ion-label>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-label class="head_lbl">Location</ion-label>
+      <ion-input type="text" placeholder="Search By City">
+        <ion-icon name="search"></ion-icon>
+      </ion-input>
+
+      <div class="btn_div">
+        <ion-button (click)="goToPropertyList()" expand="block">
+          Search Property
+        </ion-button>
+      </div>
+
+    </div>
+  </div>
+</ion-content>

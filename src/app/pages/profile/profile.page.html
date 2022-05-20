@@ -1,0 +1,31 @@
+<ion-content>
+  <div class="main_content_div">
+
+    <div class="up_div">
+      <div class="user_back bg_image" [style.backgroundImage]="'url(assets/imgs/user2.jpg)'"></div>
+    </div>
+
+    <div class="white_div">
+      
+      <ion-label class="small_lbl">Nom</ion-label>
+      <ion-input type="text" placeholder="entrez votre nom" value="" [disabled]="isDisabled"></ion-input>
+
+      <ion-label class="small_lbl">Pnenom</ion-label>
+      <ion-input type="text" placeholder="entrez votre prenom" value="" [disabled]="isDisabled"></ion-input>
+
+      <ion-label class="small_lbl">Téléphone</ion-label>
+      <ion-input type="text" placeholder="entrez votre numéro de téléphone" value="" [disabled]="isDisabled"></ion-input>
+
+      <ion-label class="small_lbl">Email </ion-label>
+      <ion-input type="text" placeholder="entrez votre Email " value="" [disabled]="isDisabled"></ion-input>
+
+      <ion-label class="small_lbl">Ville</ion-label>
+      <ion-input type="text" placeholder="entrez votre ville" value="" [disabled]="isDisabled"></ion-input>
+
+      <ion-button (click)="save()" expand="block">
+        {{btnText}}
+      </ion-button>
+
+    </div>
+  </div>
+</ion-content>

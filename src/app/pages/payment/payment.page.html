@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button mode="md"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Payment</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+
+    <ion-label class="simple_lbl">Choose Your Payment Method</ion-label>
+
+    <ion-label class="small_lbl">Total Price <span>$200.00</span></ion-label>
+
+    <div class="card_div" (click)="chooseMethod(1)">
+      <div class="round_div" [class.active]="method == 1"></div>
+      <ion-label class="small_lbl">My Default Card</ion-label>
+      <ion-label>**** **** **** 4242</ion-label>
+    </div>
+
+    <div class="card_div" (click)="chooseMethod(2)">
+      <div class="round_div" [class.active]="method == 2"></div>
+      <ion-label class="small_lbl">Visa Card</ion-label>
+      <ion-label>**** **** **** 4242</ion-label>
+    </div>
+
+    <div class="card_div" (click)="chooseMethod(3)">
+      <div class="round_div" [class.active]="method == 3"></div>
+      <ion-label class="small_lbl">Master Card</ion-label>
+      <ion-label>**** **** **** 4242</ion-label>
+    </div>
+
+    <div class="add_new_div" (click)="goToAddCard()">
+      <ion-icon name="add-circle-outline"></ion-icon>
+      <ion-label>Add New Card</ion-label>
+    </div>
+
+    <ion-button (click)="goToBooking()" expand="block">
+      Pay Now
+    </ion-button>
+
+  </div>
+</ion-content>

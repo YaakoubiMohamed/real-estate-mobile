@@ -1,0 +1,62 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>home</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <div class="main_content_div" [class.ios_pad]="plt == 'ios'">
+
+    <ion-label class="simple_lbl">Découvrir</ion-label>
+    <ion-label class="bold_lbl">Votre maison de rêve</ion-label>
+
+    <ion-input type="text" placeholder="rechercher par ville">
+      <ion-icon name="search"></ion-icon>
+    </ion-input>
+
+    <ion-label class="simple_lbl">liste annonces</ion-label>
+
+    <ion-card *ngFor="let item of annonces" (click)="goToPropertyDetail(item)">
+      <ion-item>
+          <ion-avatar slot="start">
+              <img [src]="item.user.photo">
+          </ion-avatar>
+          <ion-label>
+              <h3>{{item.user.nom}}</h3>
+              <p>{{item.date.seconds * 1000 | date:'MM-dd-yyyy'  }}</p>
+          </ion-label>
+      </ion-item>
+  
+      <img [src]="item.photo[0]" alt="Image">
+      <ion-card-header>
+          <ion-card-title>{{item.titre}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+          {{item.adresse}}
+      </ion-card-content>
+  
+      <ion-footer>
+          <ion-row>
+              <ion-col center text-center>
+                  <button>
+                    <img src="assets/imgs/area.png">
+                      <div>{{item.surface}}</div>
+                  </button>
+              </ion-col>
+              <ion-col center text-center>
+                  <button>
+                    <img src="assets/imgs/bed.png">
+                      <div>{{item.nbr_piece}}</div>
+                  </button>
+              </ion-col>
+              <ion-col center text-center>
+                  <button>
+                    <img src="assets/imgs/dinar.png">
+                      <div>{{item.prix}}</div>
+                  </button>
+              </ion-col>
+          </ion-row>
+      </ion-footer>
+  </ion-card>
+  </div>
+</ion-content>

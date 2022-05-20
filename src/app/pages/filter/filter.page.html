@@ -1,0 +1,123 @@
+<ion-header mode="ios">
+  <ion-toolbar>
+    <ion-title>filter</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <div class="main_content_div">
+    <ion-label class="head_lbl">Select Property Type</ion-label>
+    
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col size="4" (click)="chooseType(1)">
+          <div class="col_div" [class.active]="type == 1">
+            <img src="assets/imgs/app.png" *ngIf="type != 1">
+            <img src="assets/imgs/app_active.png" *ngIf="type == 1">
+            <ion-label>Apartment</ion-label>
+          </div>
+        </ion-col>
+
+        <ion-col size="4" (click)="chooseType(2)">
+          <div class="col_div" [class.active]="type == 2">
+            <img src="assets/imgs/home.png" *ngIf="type != 2">
+            <img src="assets/imgs/home_active.png" *ngIf="type == 2">
+            <ion-label>Home</ion-label>
+          </div>
+        </ion-col>
+
+        <ion-col size="4" (click)="chooseType(3)">
+          <div class="col_div" [class.active]="type == 3">
+            <img src="assets/imgs/store.png" *ngIf="type != 3">
+            <img src="assets/imgs/store_active.png" *ngIf="type == 3">
+            <ion-label>Store</ion-label>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-label class="head_lbl">Bed Rooms</ion-label>
+
+    <div class="white_div">
+      <div class="lbl_div" [class.active]="rooms == 1" (click)="chooseRooms(1)">
+        <ion-label>1</ion-label>
+      </div>
+      <div class="lbl_div" [class.active]="rooms == 2" (click)="chooseRooms(2)">
+        <ion-label>2</ion-label>
+      </div>
+      <div class="lbl_div" [class.active]="rooms == 3" (click)="chooseRooms(3)">
+        <ion-label>3</ion-label>
+      </div>
+      <div class="lbl_div" [class.active]="rooms == 4" (click)="chooseRooms(4)">
+        <ion-label>4</ion-label>
+      </div>
+      <div class="lbl_div" [class.active]="rooms == 5" (click)="chooseRooms(5)">
+        <ion-label>5</ion-label>
+      </div>
+      <div class="lbl_div" [class.active]="rooms == 6" (click)="chooseRooms(6)">
+        <ion-label>6</ion-label>
+      </div>
+    </div>
+    
+    <ion-label class="head_lbl">Bathrooms</ion-label>
+
+    <div class="white_div">
+      <div class="lbl_div" [class.active]="bath == 1" (click)="choosebath(1)">
+        <ion-label>1</ion-label>
+      </div>
+      <div class="lbl_div" [class.active]="bath == 2" (click)="choosebath(2)">
+        <ion-label>2</ion-label>
+      </div>
+      <div class="lbl_div" [class.active]="bath == 3" (click)="choosebath(3)">
+        <ion-label>3</ion-label>
+      </div>
+      <div class="lbl_div" [class.active]="bath == 4" (click)="choosebath(4)">
+        <ion-label>4</ion-label>
+      </div>
+      <div class="lbl_div" [class.active]="bath == 5" (click)="choosebath(5)">
+        <ion-label>5</ion-label>
+      </div>
+      <div class="lbl_div" [class.active]="bath == 6" (click)="choosebath(6)">
+        <ion-label>6</ion-label>
+      </div>
+    </div>
+
+    <ion-label class="head_lbl">Furnishig</ion-label>
+
+    <div class="chip_div">
+
+      <ion-chip mode="ios" (click)="selectFurnish(1)" [class.active]="furnish == 1">
+        <ion-label>Fully Furnished</ion-label>
+      </ion-chip>
+
+      <ion-chip mode="ios" (click)="selectFurnish(2)" [class.active]="furnish == 2">
+        <ion-label>Semi Furnished</ion-label>
+      </ion-chip>
+
+      <ion-chip mode="ios" (click)="selectFurnish(3)" [class.active]="furnish == 3">
+        <ion-label>Unfurnished</ion-label>
+      </ion-chip>
+
+    </div>
+
+    <ion-label class="head_lbl">Facilities</ion-label>
+
+    <div class="chip_div">
+      <ion-chip mode="ios" *ngFor="let item of facilities" (click)="selectFacilities(item)" [class.active]="item.status == 1">
+        <ion-label>{{item.name}}</ion-label>
+      </ion-chip>
+    </div>
+
+    <ion-label class="head_lbl">Price</ion-label>
+    <ion-range dualKnobs="true" min="21" max="72"></ion-range>
+
+    <div class="btn_div">
+      <ion-button (click)="close()">
+        Apply Filter
+      </ion-button>
+    </div>
+
+  </div>
+
+</ion-content>

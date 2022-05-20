@@ -1,0 +1,41 @@
+ion-toolbar{
+    --background: #EFF0F5;
+}
+ion-content{
+    --background: #EFF0F5;
+} 
+.main_content_div{
+    padding: 16px;
+
+    .flex_div{
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+        border: 1px solid #707070;
+        padding: 10px;
+        margin-bottom: 15px;
+        .color_div{
+            height: 15px;
+            width: 15px;
+            border-radius: 100%;
+            border: 1px solid #707070;
+        }
+
+        .active{
+            border-color: var(--ion-color-primary);
+            background: var(--ion-color-primary);
+        }
+
+        ion-label {
+            margin-left: 10px;
+        }
+    }
+
+    .btn_div{
+        text-align: right;
+
+        ion-button{
+            --border-radius: 5px;
+        }
+    }
+}

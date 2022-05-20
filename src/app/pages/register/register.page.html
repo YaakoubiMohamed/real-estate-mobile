@@ -1,0 +1,39 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title color="primary">Dari</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+    
+    <div class="form_div">
+      <ion-label class="head_lbl">Créer compte</ion-label>
+
+      <ion-label class="small_lbl">Nom</ion-label>
+      <ion-input type="text" placeholder="entrez votre nom"></ion-input>
+
+      <ion-label class="small_lbl">Prenom</ion-label>
+      <ion-input type="text" placeholder="entrez votre prenom"></ion-input>
+
+      <ion-label class="small_lbl">Téléphone</ion-label>
+      <ion-input type="text" placeholder="entrez votre prenom"></ion-input>
+
+      <ion-label class="small_lbl">Email </ion-label>
+      <ion-input type="text" placeholder="entrez votre Email "></ion-input>
+
+      <ion-label class="small_lbl">Mot de passe</ion-label>
+      <ion-input type="text" placeholder="mot de passe"></ion-input>
+
+      <ion-button (click)="goToHome()" expand="block">
+        Créer compte
+      </ion-button>
+
+    </div>
+
+    <div class="bottom_div">
+      <ion-label (click)="goToLogin()">Vous avez déjà un compte ? S'identifier.</ion-label>
+    </div>
+
+  </div>
+</ion-content>

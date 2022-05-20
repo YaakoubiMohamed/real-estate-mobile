@@ -1,0 +1,52 @@
+<ion-content>
+  <div class="main_content_div">
+
+    <div class="back_image bg_image" [style.backgroundImage]="'url(assets/imgs/5.jpg)'">
+
+      <div class="white_back_div" (click)="goBack()">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </div>
+
+      <div class="white_sort_div" (click)="openSort()">
+        <ion-icon name="swap-vertical-outline"></ion-icon>
+      </div>
+    </div>
+
+    <div class="white_div">
+      <ion-label class="simple_lbl">Discover</ion-label>
+
+      <ion-label class="simple_lbl">Houses in Bhavnagar</ion-label>
+
+      <div class="main_list_div">
+
+        <div class="card_div" *ngFor="let item of homes" (click)="goToPropertyDetail()">
+          <div class="image_div bg_image" [style.backgroundImage]="'url( ' + item.img + ' )'"></div>
+
+          <div class="detail_div">
+            <ion-label class="city">{{item.addr}}</ion-label>
+            <ion-label class="price">${{item.price}}</ion-label>
+
+            <ion-grid fixed>
+              <ion-row>
+                <ion-col size="4">
+                  <img src="assets/imgs/bed.png">
+                  <ion-label>{{item.bed}} BHK</ion-label>
+                </ion-col>
+                <ion-col size="4">
+                  <img src="assets/imgs/bath.png">
+                  <ion-label>{{item.bath}}</ion-label>
+                </ion-col>
+                <ion-col size="4" style="border-right: none;">
+                  <img src="assets/imgs/area.png">
+                  <ion-label>{{item.area}} m2</ion-label>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</ion-content>

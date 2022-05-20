@@ -1,0 +1,37 @@
+<ion-header mode="ios">
+  <ion-toolbar>
+    <ion-title>sort</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+
+    <div class="flex_div" (click)="sort(1)">
+      <div class="color_div" [class.active]="sortBy == 1"></div>
+      <ion-label>Relavance</ion-label>
+    </div>
+
+    <div class="flex_div" (click)="sort(2)">
+      <div class="color_div" [class.active]="sortBy == 2"></div>
+      <ion-label>Price : Low to High</ion-label>
+    </div>
+
+    <div class="flex_div" (click)="sort(3)">
+      <div class="color_div" [class.active]="sortBy == 3"></div>
+      <ion-label>Price : High to Low</ion-label>
+    </div>
+
+    <div class="flex_div" (click)="sort(4)">
+      <div class="color_div" [class.active]="sortBy == 4"></div>
+      <ion-label>Newly Added</ion-label>
+    </div>
+
+    <div class="btn_div">
+      <ion-button (click)="close()">
+        Apply Sort
+      </ion-button>
+    </div>
+
+  </div>
+</ion-content>

@@ -1,0 +1,40 @@
+.main_content_div{
+    width: 100%;
+    padding: 75px;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    ion-label {
+        display: block;
+    }
+
+    .simple_lbl{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .small_lbl{
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+    ion-icon{
+        font-size: 130px;
+        color: var(--ion-color-primary);
+    }
+
+    .btn_div{
+        padding-top: 50px;
+        
+        ion-button{
+            margin-top: 10px;
+            --background: linear-gradient(to top right,var(--ion-color-primary),#1c7168);
+        }
+
+        .clear_btn{
+            --background: white !important;
+        }
+    }
+}

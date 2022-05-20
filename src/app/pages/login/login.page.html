@@ -1,0 +1,43 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title color="primary">Dari</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+    
+    <div class="form_div">
+      <ion-label class="head_lbl">Connexion</ion-label>
+
+      <ion-label class="small_lbl">Email</ion-label>
+      <ion-input type="text" placeholder="Email"></ion-input>
+
+      <ion-label class="small_lbl">Mot de passe</ion-label>
+      <ion-input type="text" placeholder="Mot de passe"></ion-input>
+
+      <ion-label class="forgot" (click)="goToForgot()">Mot de passe oublié ?</ion-label>
+
+      <ion-button (click)="goToHome()" expand="block">
+        Connexion
+      </ion-button>
+
+      <ion-label class="or_lbl">Ou Continuer avec</ion-label>
+
+      <div class="flex_div">
+        <ion-button class="fb">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </ion-button>
+
+        <ion-button class="gp">
+          <ion-icon name="logo-google"></ion-icon>
+        </ion-button>
+      </div>
+    </div>
+
+    <div class="bottom_div">
+      <ion-label (click)="goToRegister()">Vous n'avez pas de compte ? S'inscrire.</ion-label>
+    </div>
+
+  </div>
+</ion-content>
